@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="787871951412550519b0222aba3c9df4cea49875">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.1.1_0f1aecf2c1d27016d79e3cf4bfff4344b28fd4df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\installed\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_3051412cc5453238fb53cfb489dd74c894716956\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.1.1_b202f3eb68ad02ed73a1718b7517d56d27c9118c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.1.1_c0a0dea5aba50d456556784152182c2a89b0c725\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.1.1_3bd2786f2cb85ab30c785864a61ea3275b90dcb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7d1176f6393eff90694f70ed88f9f63ffe89aa56">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5947001b97e4df9fa2c490817a72016632b57fac\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\design\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e195bd694d5389acfba27ff4fdfa64c4c65b2c05">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.1.1_72adcb94ed8239f9daca2a7e788d3afd522b897d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.1.1_c0ee2f2574192bd72ceee283ba3c6c2e0db6bee0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c5f9eeba7b00391f2dfa2b821b29f17174ccdd99">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2192af3bf211f891b5f98fb26c737177b187f6d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\intellijProjects\Pets-Udacity\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_52c16875154841deae18c5b82f57161401c9171c\classes.dex" />
+    </item>
+
+</items>
