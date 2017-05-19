@@ -108,6 +108,8 @@ public class CatalogActivity extends AppCompatActivity {
 
         long newRowId = db.insert(PetContract.PetEntry.TABLE_NAME, null, values);
 
+        System.out.println("record inserted  with newRowId " + newRowId);
+
     }
 
 
