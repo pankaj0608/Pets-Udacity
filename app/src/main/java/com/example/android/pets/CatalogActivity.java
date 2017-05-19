@@ -70,6 +70,14 @@ public class CatalogActivity extends AppCompatActivity {
         finally {
             cursor.close();
         }
+
+//        Code to insert values
+//        ContentValues values = new ContentValues();
+//        values.put(PetEntry.COLUMN_PET_NAME, "Garfield");
+//        values.put(PetEntry.COLUMN_PET_BREED, "Tabby");
+//        values.put(PetEntry.COLUMN_PET_GENDER, PetEntry.GENDER_MALE);
+//        values.put(PetEntry.COLUMN_PET_WEIGHT, 7);
+//        db.insert(PetEntry.TABLE_NAME, null, values);
     }
 
 
