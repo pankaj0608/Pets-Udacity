@@ -15,6 +15,7 @@
  */
 package com.example.android.pets;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -63,11 +64,10 @@ public class CatalogActivity extends AppCompatActivity {
             System.out.println("Records in the Databse " + cursor.getCount());
 
 
-            while(cursor.moveToNext()) {
+            while (cursor.moveToNext()) {
                 System.out.println(cursor.getString(1));
             }
-        }
-        finally {
+        } finally {
             cursor.close();
         }
 
@@ -80,6 +80,76 @@ public class CatalogActivity extends AppCompatActivity {
 //        db.insert(PetEntry.TABLE_NAME, null, values);
     }
 
+
+    /**
+     * Helper method to insert hardcoded pet data into the database.
+     * For debugging purposes only.
+     */
+    private void insertPet() {
+        // Gets the database in write mode
+        PetDbHelper petDbHelper = new PetDbHelper(this);
+        SQLiteDatabase db = petDbHelper.getWritableDatabase();
+
+        // Create a ContentValues object where column names are the keys,
+        // and Toto's pet attributes are the values.
+        ContentValues values = new ContentValues();
+        values.put(PetContract.PetEntry.COLUMN_PET_NAME, "Toto");
+        values.put(PetContract.PetEntry.COLUMN_PET_BREED, "Terrier");
+        values.put(PetContract.PetEntry.COLUMN_PET_GENDER, PetContract.PetEntry.GENDER_MALE);
+        values.put(PetContract.PetEntry.COLUMN_PET_WEIGHT, 7);
+
+        // Insert a new row for Toto in the database, returning the ID of that new row.
+        // The first argument for db.insert() is the pets table name.
+        // The second argument provides the name of a column in which the framework
+        // can insert NULL in the event that the ContentValues is empty (if
+        // this is set to "null", then the framework will not insert a row when
+        // there are no values).
+        // The third argument is the ContentValues object containing the info for Toto.
+
+        long newRowId = db.insert(PetContract.PetEntry.TABLE_NAME, null, values);
+
+    }
+
+
+    /**
+     * Helper method to insert hardcoded pet data into the database.
+     * For debugging purposes only.
+     */
+    private void deleteAllPet() {
+        // Gets the database in write mode
+        PetDbHelper petDbHelper = new PetDbHelper(this);
+        SQLiteDatabase db = petDbHelper.getWritableDatabase();
+
+        String selection = null; //FeedEntry.COLUMN_NAME_TITLE + " LIKE ?";
+        String[] selectionArgs = null; //{"MyTitle"};
+        db.delete(PetContract.PetEntry.TABLE_NAME, selection, selectionArgs);
+
+    }
+
+    /**
+     * Helper method to insert hardcoded pet data into the database.
+     * For debugging purposes only.
+     */
+    private void updatePet() {
+        // Gets the database in write mode
+        PetDbHelper petDbHelper = new PetDbHelper(this);
+        SQLiteDatabase db = petDbHelper.getWritableDatabase();
+
+//        // New value for one column
+//        ContentValues values = new ContentValues();
+//        values.put(FeedEntry.COLUMN_NAME_TITLE, title);
+//
+//// Which row to update, based on the title
+//        String selection = FeedEntry.COLUMN_NAME_TITLE + " LIKE ?";
+//        String[] selectionArgs = {"MyTitle"};
+//
+//        int count = db.update(
+//                FeedReaderDbHelper.FeedEntry.TABLE_NAME,
+//                values,
+//                selection,
+//                selectionArgs);
+
+    }
 
 
     @Override
@@ -96,11 +166,14 @@ public class CatalogActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to a click on the "Insert dummy data" menu option
             case R.id.action_insert_dummy_data:
-                // Do nothing for now
+                insertPet();
+                displayDatabaseInfo();
                 return true;
             // Respond to a click on the "Delete all entries" menu option
             case R.id.action_delete_all_entries:
                 // Do nothing for now
+                deleteAllPet();
+                displayDatabaseInfo();
                 return true;
         }
         return super.onOptionsItemSelected(item);
