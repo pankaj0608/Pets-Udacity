@@ -57,15 +57,19 @@ public class CatalogActivity extends AppCompatActivity {
         PetDbHelper petDbHelper = new PetDbHelper(this);
         SQLiteDatabase db = petDbHelper.getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("select * from " + PetContract.PetEntry.TABLE_NAME, null);
+        //Cursor cursor = db.rawQuery("select * from " + PetContract.PetEntry.TABLE_NAME, null);
 
+        Cursor cursor = db.query(PetContract.PetEntry.TABLE_NAME,
+                null, null,
+                null, null,
+                null, null);
         try {
 
             System.out.println("Records in the Databse " + cursor.getCount());
 
 
             while (cursor.moveToNext()) {
-                System.out.println(cursor.getString(1));
+                System.out.println(cursor.getString(1) + " : " + cursor.getString(2));
             }
         } finally {
             cursor.close();
