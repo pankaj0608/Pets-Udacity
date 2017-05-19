@@ -146,7 +146,7 @@ public class EditorActivity extends AppCompatActivity {
         ContentValues values = new ContentValues();
         values.put(PetContract.PetEntry.COLUMN_PET_NAME, mNameEditText.getText().toString());
         values.put(PetContract.PetEntry.COLUMN_PET_BREED, mBreedEditText.getText().toString());
-        values.put(PetContract.PetEntry.COLUMN_PET_GENDER, mGenderSpinner.getSelectedItem().toString());
+        values.put(PetContract.PetEntry.COLUMN_PET_GENDER, mGender);
         values.put(PetContract.PetEntry.COLUMN_PET_WEIGHT, mWeightEditText.getText().toString());
 
         // Insert a new row for Toto in the database, returning the ID of that new row.

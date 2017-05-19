@@ -62,7 +62,7 @@ public class CatalogActivity extends AppCompatActivity {
         String selection = PetContract.PetEntry.COLUMN_PET_GENDER + "=?";
         String[] selectionArgs =
                 new String[]
-                {String.valueOf("Male")};
+                {String.valueOf(PetContract.PetEntry.GENDER_MALE)};
 
 
         Cursor cursor = db.query(PetContract.PetEntry.TABLE_NAME,
