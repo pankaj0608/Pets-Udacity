@@ -59,6 +59,12 @@ public class CatalogActivity extends AppCompatActivity {
 
         //Cursor cursor = db.rawQuery("select * from " + PetContract.PetEntry.TABLE_NAME, null);
 
+        String selection = PetContract.PetEntry.COLUMN_PET_GENDER + "=?";
+        String[] selectionArgs =
+                new String[]
+                {String.valueOf("Male")};
+
+
         Cursor cursor = db.query(PetContract.PetEntry.TABLE_NAME,
                 null, null,
                 null, null,
