@@ -1,9 +1,11 @@
 package com.example.android.pets.data;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
 /**
@@ -54,16 +56,41 @@ public class PetProvider extends ContentProvider {
 
     @Override
     public Cursor query(Uri uri, String[] strings, String s, String[] strings1, String s1) {
-        switch (sUriMatcher.match(uri)) {
+        Cursor cursor = null;
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+
+        int match = sUriMatcher.match(uri);
+
+        switch (match) {
             case PETS:
                 System.out.println("I am in Pets " + uri);
+
+                cursor = mDbHelper.getReadableDatabase().
+                        query(PetContract.PetEntry.TABLE_NAME,
+                        null, null,
+                        null, null,
+                        null, null);
                 break;
+
             case PET_ID:
                 System.out.println("I am in Pets Id " + uri);
+
+                String selection = PetContract.PetEntry._ID + "=?";
+
+                String[] selectionArgs =
+                        new String[]
+                                {String.valueOf(ContentUris.parseId(uri))};
+
+                cursor = mDbHelper.getReadableDatabase().
+                        query(PetContract.PetEntry.TABLE_NAME,
+                                null, selection,
+                                selectionArgs, null,
+                                null, null);
+
                 break;
         }
 
-        return null;
+        return cursor;
     }
 
     @Override
