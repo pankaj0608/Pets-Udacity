@@ -57,7 +57,7 @@ public class PetProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] strings, String s, String[] strings1, String s1) {
         Cursor cursor = null;
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+        SQLiteDatabase database = mDbHelper.getReadableDatabase();
 
         int match = sUriMatcher.match(uri);
 
@@ -65,8 +65,7 @@ public class PetProvider extends ContentProvider {
             case PETS:
                 System.out.println("I am in Pets " + uri);
 
-                cursor = mDbHelper.getReadableDatabase().
-                        query(PetContract.PetEntry.TABLE_NAME,
+                cursor = database.query(PetContract.PetEntry.TABLE_NAME,
                         null, null,
                         null, null,
                         null, null);
@@ -81,8 +80,7 @@ public class PetProvider extends ContentProvider {
                         new String[]
                                 {String.valueOf(ContentUris.parseId(uri))};
 
-                cursor = mDbHelper.getReadableDatabase().
-                        query(PetContract.PetEntry.TABLE_NAME,
+                cursor = database.query(PetContract.PetEntry.TABLE_NAME,
                                 null, selection,
                                 selectionArgs, null,
                                 null, null);
