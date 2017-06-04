@@ -62,7 +62,7 @@ public class CatalogActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-       // displayDatabaseInfo();
+        displayDatabaseInfo();
     }
 
     /**
@@ -95,7 +95,7 @@ public class CatalogActivity extends AppCompatActivity {
         PetCursorAdapter adapter = new PetCursorAdapter(this, cursor);
 
         // Attach the adapter to the ListView.
-        petListView.setAdapter(adapter);
+       // petListView.setAdapter(adapter);
     }
 
     /**
