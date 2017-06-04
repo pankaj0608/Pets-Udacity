@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="87d9719fea7ccbd200b8cb4438bbf8e61156c69d">
+        sha1="3d463e106bacffe8bb39b0dcad654880036d3336">
         <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5947001b97e4df9fa2c490817a72016632b57fac\classes.dex" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="8ed349f239ecb6f227289e0e8ab2c50b8275ed43">
+        sha1="987e5b65da15b3b43ad875711c35f693e074d9d2">
         <dex dex="C:\intellijProjects\Pets-Udacity\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2192af3bf211f891b5f98fb26c737177b187f6d2\classes.dex" />
     </item>
 
